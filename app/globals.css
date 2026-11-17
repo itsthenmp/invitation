@@ -273,3 +273,7 @@ body .welcome-introduction .welcome-events {
   line-height: 1.25;
   text-transform: none;
 }
+
+.story .section-heading h2 {
+  font-size: clamp(30px, 9vw, 64px);
+}
