@@ -3,7 +3,7 @@ import './globals.css';
 
 const siteUrl = 'https://itsthenmp.github.io/invitation/';
 const title = 'Invitation';
-const description = 'Join Sudipta and Nitesh for their wedding and reception on 14 and 17 February 2027.';
+const description = 'Celebrate the wedding and reception of Sudipta and Nitesh with us.';
 const shareImage = new URL('photos/invitation-share-v1.jpg', siteUrl).toString();
 
 export const metadata: Metadata = {
