@@ -1,4 +1,23 @@
 import type { Metadata } from 'next';
 import './globals.css';
-export const metadata: Metadata = { title:'A celebration of love', description:'A wedding invitation, made with love.', icons: { icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/photos/ns-monogram-transparent.png` } };
+
+const siteUrl = 'https://itsthenmp.github.io/reception/';
+const title = 'Invitation';
+const description = 'Join Sudipta and Nitesh for their wedding and reception on 14 and 17 February 2027.';
+const shareImage = new URL('photos/invitation-share-v1.jpg', siteUrl).toString();
+
+export const metadata: Metadata = {
+  title,
+  description,
+  icons: { icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/photos/ns-monogram-transparent.png` },
+  openGraph: {
+    type: 'website',
+    url: siteUrl,
+    title,
+    description,
+    images: [{ url: shareImage, width: 1200, height: 627, type: 'image/jpeg', alt: 'Invitation in gold on a red card' }],
+  },
+  twitter: { card: 'summary_large_image', title, description, images: [shareImage] },
+};
+
 export default function Layout({children}:{children:React.ReactNode}) { return <html lang="en"><head><style>{`:where(html,body){margin:0;background:#140d0a}:where(.photo-opening){position:relative;width:100%;max-width:540px;margin:auto;height:100dvh;min-height:100dvh;overflow:hidden;background:#140d0a}:where(.reference-opening){position:absolute;inset:0;display:grid;place-items:center;background:#140d0a}:where(.reference-frame){position:relative;width:min(100%,calc(100dvh * .7143));aspect-ratio:1060/1484}:where(.gate,.seal-image,.invitation-reveal){visibility:hidden}:where(.reference-seal){position:absolute;left:50.8%;top:48.7%;transform:translate(-50%,-50%);width:19%;height:15%;border:0;border-radius:50%;background:transparent;cursor:pointer}:where(.sr-only){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}:where(.skip){position:absolute;right:24px;bottom:24px;color:#fff;background:#281713aa;padding:10px;z-index:10}`}</style></head><body>{children}</body></html>; }
