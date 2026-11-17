@@ -25,7 +25,7 @@ Visit http://localhost:3000. Run `npm test` and `npm run build` to verify. The e
 ## Publish on GitHub Pages
 
 1. Create a GitHub repository and push the contents of this folder to its `main` branch. In repository Settings → Pages, select **GitHub Actions** as the source.
-2. In Settings → Secrets and variables → Actions → Variables, the workflow defaults `NEXT_PUBLIC_BASE_PATH` to `/reception`. Set the variable to `/REPOSITORY-NAME` if you rename the repository. For a user site or custom domain, remove the `/reception` fallback from `.github/workflows/deploy.yml` so the value is empty. Add `NEXT_PUBLIC_RSVP_ENDPOINT` after deploying the RSVP service below.
+2. In Settings → Secrets and variables → Actions → Variables, the workflow defaults `NEXT_PUBLIC_BASE_PATH` to `/invitation`. Set the variable to `/REPOSITORY-NAME` if you rename the repository. For a user site or custom domain, remove the `/invitation` fallback from `.github/workflows/deploy.yml` so the value is empty. Add `NEXT_PUBLIC_RSVP_ENDPOINT` after deploying the RSVP service below.
 3. Push to `main` or run the “Deploy to GitHub Pages” workflow. The workflow tests, builds, and publishes the static export. Configuration and environment changes require a new build. If using a custom domain, configure it in GitHub Pages settings.
 
 ## Private RSVP storage

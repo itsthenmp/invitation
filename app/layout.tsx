@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-const siteUrl = 'https://itsthenmp.github.io/reception/';
+const siteUrl = 'https://itsthenmp.github.io/invitation/';
 const title = 'Invitation';
 const description = 'Join Sudipta and Nitesh for their wedding and reception on 14 and 17 February 2027.';
 const shareImage = new URL('photos/invitation-share-v1.jpg', siteUrl).toString();
